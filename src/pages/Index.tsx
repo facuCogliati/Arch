@@ -21,34 +21,29 @@ const Index = () => {
       <main className="flex-grow">
         {/* =========================================================
             BLOQUE 1: Hero + Feature 3D
-            Estrategia: El div padre maneja el fondo.
-            'min-h-screen' asegura que cubra al menos una pantalla.
+            (Solo este bloque tiene el degradado al 50% de opacidad)
            ========================================================= */}
         <div
           className="relative w-full flex flex-col justify-center"
           style={{
-            backgroundImage: `url(${fondoArch})`,
-            backgroundSize: "cover", // Cubre todo el ancho
-            backgroundPosition: "50% 100%", // Ancla el dibujo arriba
+            // Usamos 0.5 de opacidad para oscurecer "solo un poco"
+            backgroundImage: `linear-gradient(rgba(2, 8, 23, 0.5), rgba(2, 8, 23, 0.5)), url(${fondoArch})`,
+            backgroundSize: "cover",
+            backgroundPosition: "left bottom",
             backgroundRepeat: "no-repeat",
           }}
         >
-          {/* Capa de oscurecimiento opcional si el texto no se lee bien */}
-          {/* <div className="absolute inset-0 bg-background/10 z-0" /> */}
-
           <div className="relative z-10 pb-20">
-            {" "}
-            {/* pb-20 da aire abajo antes del siguiente bloque */}
             <HeroSection />
             <Feature3DSection />
           </div>
 
-          {/* Degradado suave al final de este bloque para unirlo con el siguiente */}
-          {/* <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#020817] to-transparent z-10" /> */}
+          <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#020817] to-transparent z-10" />
         </div>
 
         {/* =========================================================
             BLOQUE 2: Navegación + Medidas
+            (Vuelto a su estado original, sin oscurecer)
            ========================================================= */}
         <div
           className="relative w-full flex flex-col justify-center"
@@ -57,7 +52,6 @@ const Index = () => {
             backgroundSize: "cover",
             backgroundPosition: "top center",
             backgroundRepeat: "no-repeat",
-            // Un pequeño truco: color de fondo por si la imagen no carga o es corta
             backgroundColor: "#020817",
           }}
         >
@@ -66,12 +60,12 @@ const Index = () => {
             <FeatureMeasurementsSection />
           </div>
 
-          {/* Degradado de unión */}
           <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#020817] to-transparent z-10" />
         </div>
 
         {/* =========================================================
             BLOQUE 3: Micrositio + Gestión
+            (Vuelto a su estado original, sin oscurecer)
            ========================================================= */}
         <div
           className="relative w-full flex flex-col justify-center"
@@ -88,13 +82,11 @@ const Index = () => {
             <ManagementSection />
           </div>
 
-          {/* Degradado final hacia el Contacto */}
           <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#0a0f1e] to-transparent z-10" />
         </div>
 
         {/* =========================================================
-            CONTACTO (Fondo Sólido)
-            Ya no se romperá porque está en el flujo normal (flex)
+            CONTACTO
            ========================================================= */}
         <div className="relative z-20 bg-[#0a0f1e]">
           <ContactSection />

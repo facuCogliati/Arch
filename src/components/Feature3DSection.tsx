@@ -1,4 +1,4 @@
-import apartmentView from "@/assets/3d-apartment-view.jpg";
+import apartmentView from "@/assets/Feature-section.jpg";
 
 const Feature3DSection = () => {
   return (
@@ -44,7 +44,7 @@ const Feature3DSection = () => {
               <img
                 src={apartmentView}
                 alt="Vista 3D de apartamento"
-                className="relative rounded-lg shadow-2xl w-full border border-white/5"
+                className="relative  shadow-2xl w-full border border-white/5"
               />
 
               {/* Opcional: Si quieres esa sombra sutil debajo, usa esto en lugar del glow masivo */}
