@@ -1,4 +1,4 @@
-import phoneMockup from "@/assets/phone-mockup.jpg";
+import phoneMockup from "@/assets/CELU HD.png";
 
 const FeatureNavigationSection = () => {
   return (
@@ -9,13 +9,17 @@ const FeatureNavigationSection = () => {
           {/* Imagen (Celular) */}
           <div className="order-2 lg:order-1 flex justify-center lg:justify-end">
             <div className="relative">
-              {/* Quité el fondo glow blur para que se vea nítido como en la referencia */}
               <img
                 src={phoneMockup}
                 alt="Aplicación móvil ArchVisualizer"
-                // Quité 'shadow-2xl' si quieres que se integre más plano, o déjalo si te gusta.
-                // Importante: 'bg-transparent'
                 className="relative max-w-[280px] md:max-w-xs rounded-[2.5rem] border-[8px] border-black/80 shadow-2xl animate-float"
+                // MAGIA: El degradado hace el desvanecido y corta el 10% final
+                style={{
+                  WebkitMaskImage:
+                    "linear-gradient(to bottom, black 87%, transparent 90%, transparent 100%)",
+                  maskImage:
+                    "linear-gradient(to bottom, black 87%, transparent 90%, transparent 100%)",
+                }}
               />
             </div>
           </div>

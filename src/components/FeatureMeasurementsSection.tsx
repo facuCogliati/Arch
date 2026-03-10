@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import dashboardVariants from "@/assets/dashboard-variants.jpg";
+import dashboardVariants from "@/assets/VERSION 1.jpg";
+import dashboardVariants2 from "@/assets/VERSION 2.jpg";
 // Si tienes la segunda imagen real, impórtala aquí:
 // import dashboardVariants2 from "@/assets/dashboard-variants-2.jpg";
 
@@ -8,7 +9,7 @@ const FeatureMeasurementsSection = () => {
   // (Si tienes la segunda imagen real, reemplaza la segunda 'dashboardVariants' por 'dashboardVariants2')
   const images = [
     dashboardVariants,
-    dashboardVariants, // Pon aquí tu segunda imagen
+    dashboardVariants2, // Pon aquí tu segunda imagen
   ];
 
   // 2. Estado para saber qué índice mostrar (0 o 1)
@@ -21,7 +22,7 @@ const FeatureMeasurementsSection = () => {
         // Si estamos en la última, volvemos a 0, si no, sumamos 1
         prevIndex === images.length - 1 ? 0 : prevIndex + 1,
       );
-    }, 4000); // 4000ms = 4 segundos
+    }, 2000); // 4000ms = 4 segundos
 
     // Limpieza del intervalo cuando el componente se desmonta
     return () => clearInterval(interval);
@@ -52,7 +53,7 @@ const FeatureMeasurementsSection = () => {
               <img
                 src={images[currentImageIndex]}
                 alt="Variantes de armado"
-                className="relative rounded-lg shadow-2xl w-full border border-white/5 object-cover"
+                className="relative lg:min-h-[500px] shadow-2xl w-full border border-white/5 object-cover"
                 // 'object-cover' asegura que si las imagenes tienen distinto tamaño, llenen el espacio igual
               />
 

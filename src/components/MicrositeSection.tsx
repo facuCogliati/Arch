@@ -1,4 +1,4 @@
-import micrositePreview from "@/assets/microsite-preview.jpg";
+import micrositePreview from "@/assets/MICROSITIO-q59.jpg";
 
 const MicrositeSection = () => {
   return (
@@ -31,7 +31,7 @@ const MicrositeSection = () => {
           </div>
 
           {/* Image */}
-          <div className="order-2">
+          <div className="order-2 ">
             <div className="relative">
               {/* 4. Limpieza: Borde azul claro y sombra suave */}
               <img
@@ -41,7 +41,7 @@ const MicrositeSection = () => {
                 // - Se cambió el color del borde a '#38bdf8' (celeste).
                 // - Se aumentó el grosor del borde a 'border-2'.
                 // - Se ajustó la sombra a 'shadow-xl' para un efecto más suave.
-                className="relative rounded-lg shadow-xl w-full border-2 border-[#38bdf8]"
+                className="relative shadow-xl w-full border-2 border-[#38bdf8] lg:min-h-[500px]"
               />
             </div>
           </div>

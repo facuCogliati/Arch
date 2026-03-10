@@ -1,4 +1,4 @@
-import managementDashboard from "@/assets/management-dashboard.jpg";
+import managementDashboard from "@/assets/ADMIN-q70.jpg";
 
 const ManagementSection = () => {
   return (
@@ -40,7 +40,7 @@ const ManagementSection = () => {
               <img
                 src={managementDashboard}
                 alt="Dashboard de gestión"
-                className="relative rounded-lg shadow-2xl w-full border border-white/5"
+                className="relative shadow-2xl  w-full border border-white/5"
               />
             </div>
           </div>

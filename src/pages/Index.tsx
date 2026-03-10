@@ -27,7 +27,7 @@ const Index = () => {
           className="relative w-full flex flex-col justify-center"
           style={{
             // Usamos 0.5 de opacidad para oscurecer "solo un poco"
-            backgroundImage: `linear-gradient(rgba(2, 8, 23, 0.5), rgba(2, 8, 23, 0.5)), url(${fondoArch})`,
+            backgroundImage: `linear-gradient(rgba(2, 8, 23, 0.5), rgba(2, 8, 23, 0.1)), url(${fondoArch})`,
             backgroundSize: "cover",
             backgroundPosition: "left bottom",
             backgroundRepeat: "no-repeat",
@@ -38,7 +38,7 @@ const Index = () => {
             <Feature3DSection />
           </div>
 
-          <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#020817] to-transparent z-10" />
+          {/* <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#020817] to-transparent z-10" /> */}
         </div>
 
         {/* =========================================================
@@ -60,7 +60,7 @@ const Index = () => {
             <FeatureMeasurementsSection />
           </div>
 
-          <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#020817] to-transparent z-10" />
+          {/* <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#020817] to-transparent z-10" /> */}
         </div>
 
         {/* =========================================================

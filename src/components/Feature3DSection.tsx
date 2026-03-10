@@ -6,7 +6,7 @@ const Feature3DSection = () => {
     <section id="features" className="pt-16 pb-20 md:pb-32 bg-transparent">
       <div className="container">
         {/* Ajusté el gap para separar más la imagen del texto, como en la foto */}
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
           {/* Columna de Texto */}
           <div className="order-1">
             {/* 1. SUBTÍTULO CORREGIDO */}
@@ -36,7 +36,7 @@ const Feature3DSection = () => {
           </div>
 
           {/* Columna de Imagen */}
-          <div className="order-2">
+          <div className="order-2 lg:mt-[50px]">
             {/* 4. IMAGEN LIMPIA */}
             {/* Eliminé el div del 'glow' y el blur. La referencia es un corte limpio. */}
             {/* Cambié rounded-2xl a rounded-lg (bordes menos redondos, más profesionales) */}
@@ -44,7 +44,7 @@ const Feature3DSection = () => {
               <img
                 src={apartmentView}
                 alt="Vista 3D de apartamento"
-                className="relative  shadow-2xl w-full border border-white/5"
+                className="relative lg:min-h-[600px]  shadow-2xl w-full border border-white/5"
               />
 
               {/* Opcional: Si quieres esa sombra sutil debajo, usa esto en lugar del glow masivo */}
