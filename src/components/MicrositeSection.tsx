@@ -12,7 +12,7 @@ const MicrositeSection = () => {
           </span>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+        <div className="flex md:flex-row gap-12 lg:gap-16 items-start">
           {/* Text Content */}
           <div className="order-1">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-white">
@@ -31,7 +31,7 @@ const MicrositeSection = () => {
           </div>
 
           {/* Image */}
-          <div className="order-2 ">
+          <div className="order-2 flex-1">
             <div className="relative">
               {/* 4. Limpieza: Borde azul claro y sombra suave */}
               <img

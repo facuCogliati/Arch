@@ -9,11 +9,11 @@ const ManagementSection = () => {
             - Desktop (lg): 2 columnas.
             - gap-12: Espacio entre elementos.
         */}
-        <div className="grid grid-cols-1 lg:grid-cols-2  ">
+        <div className="flex md:flex-row flex-col gap-12 lg:gap-16">
           {/* TEXTO -> FILA 1, COLUMNA 1 
              (lg:col-start-1 lg:row-start-1)
           */}
-          <div className="lg:col-start-1 lg:row-start-1">
+          <div className="">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-white">
               Gestión del Estado
               <br />
@@ -35,7 +35,7 @@ const ManagementSection = () => {
              Esto fuerza a que la imagen baje y se vaya a la derecha, dejando
              el espacio de la izquierda libre para el dibujo del fondo.
           */}
-          <div className="lg:col-start-2 lg:row-start-2 w-full">
+          <div className="flex-1 w-full">
             <div className="relative">
               <img
                 src={managementDashboard}
