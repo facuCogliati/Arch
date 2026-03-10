@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import heroVideo from "@/assets/ARCHVISUALIZER - ES. WEB.mp4";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   // Estado para controlar si el popup del video está abierto
@@ -33,10 +34,16 @@ const HeroSection = () => {
           style={{ animationDelay: "0.2s" }}
         >
           {/* Agregamos el onClick para cambiar el estado y abrir el video */}
-          <Button variant="hero" size="lg" onClick={() => setIsVideoOpen(true)}>
-            VER DEMO
-          </Button>
-          <Button variant="heroOutline" size="lg">
+          <Link to="https://www.archvisualizer.com/serena/">
+            <Button variant="hero" size="lg">
+              VER DEMO
+            </Button>
+          </Link>
+          <Button
+            variant="heroOutline"
+            size="lg"
+            onClick={() => setIsVideoOpen(true)}
+          >
             CÓMO FUNCIONA
           </Button>
         </div>
