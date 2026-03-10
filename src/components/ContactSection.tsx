@@ -5,7 +5,7 @@ const ContactSection = () => {
     // CAMBIOS CLAVE:
     // 1. 'bg-[#0a0f1e]': Color sólido oscuro (igual al del Header) para tapar el fondo de planos anterior.
     // 2. 'relative z-20': Asegura que esta sección esté POR ENCIMA del fondo desbordado de la sección anterior.
-    <section id="contact" className="py-20 md:py-32 bg-[#0a0f1e] relative z-20">
+    <section id="contact" className="py-20 md:py-36 bg-[#0a0f1e] relative z-20">
       <div className="container">
         <h2 className="text-3xl md:text-4xl font-bold mb-8 text-white">
           Contacto

@@ -8,7 +8,7 @@ const HeroSection = () => {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
 
   return (
-    <section className="relative flex flex-col items-center justify-center pt-60 pb-36 overflow-hidden bg-transparent">
+    <section className="relative flex flex-col items-center justify-center pt-44 md:pt-60 pb-36 md:pb-36 overflow-hidden bg-transparent">
       {/* ... (Las luces/decoraciones siguen igual) ... */}
 
       <div className="container relative z-10 text-center">

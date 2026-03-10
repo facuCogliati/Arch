@@ -29,7 +29,7 @@ const FeatureMeasurementsSection = () => {
   }, [images.length]);
 
   return (
-    <section className="py-20 md:py-32 bg-transparent">
+    <section className="py-10 md:py-28 bg-transparent">
       <div className="container">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           {/* Texto (Izquierda) */}

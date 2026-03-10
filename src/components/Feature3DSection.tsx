@@ -3,7 +3,10 @@ import apartmentView from "@/assets/Feature-section.jpg";
 const Feature3DSection = () => {
   return (
     // Mantenemos bg-transparent para que se vea el plano de fondo del Index
-    <section id="features" className="pt-16 pb-20 md:pb-32 bg-transparent">
+    <section
+      id="features"
+      className="pt-8 md:pt-16 pb-100 md:pb-32 bg-transparent"
+    >
       <div className="container">
         {/* Ajusté el gap para separar más la imagen del texto, como en la foto */}
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-start">

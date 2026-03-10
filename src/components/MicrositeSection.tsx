@@ -3,7 +3,7 @@ import micrositePreview from "@/assets/MICROSITIO-q59.jpg";
 const MicrositeSection = () => {
   return (
     // 1. Fondo transparente
-    <section className="py-20 md:py-32 bg-transparent">
+    <section className="py-10 md:py-28 bg-transparent">
       <div className="container">
         {/* 2. Subtítulo: Punto y color celeste */}
         <div className="mb-4">
@@ -12,7 +12,7 @@ const MicrositeSection = () => {
           </span>
         </div>
 
-        <div className="flex md:flex-row gap-12 lg:gap-16 items-start">
+        <div className="flex flex-col md:flex-row gap-12 lg:gap-16 items-start">
           {/* Text Content */}
           <div className="order-1">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-white">

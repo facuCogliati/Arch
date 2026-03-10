@@ -2,7 +2,7 @@ import managementDashboard from "@/assets/ADMIN-q70.jpg";
 
 const ManagementSection = () => {
   return (
-    <section className="py-20 md:py-32 bg-transparent">
+    <section className="py-10 md:py-28 bg-transparent">
       <div className="container">
         {/* DEFINICIÓN DE LA GRILLA:
             - Mobile: 1 sola columna.
