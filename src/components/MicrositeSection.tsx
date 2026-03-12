@@ -18,11 +18,11 @@ const MicrositeSection = ({ t }) => {
       <div className="container">
         {/* Subtítulo: Lo animamos para que aparezca primero */}
         <div
-          className={`mb-4 transition-all duration-700 ${
+          className={`mb-6 transition-all duration-700 ${
             inView ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4"
           }`}
         >
-          <span className="text-[#38bdf8] text-lg font-bold tracking-wider uppercase">
+          <span className="text-[#38bdf8] text-lg font-bold tracking-wider uppercase ">
             . {t.sectionTitle}
           </span>
         </div>

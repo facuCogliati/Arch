@@ -26,7 +26,7 @@ const Feature3DSection = ({ t }) => {
                 : "opacity-0 translate-y-10"
             }`}
           >
-            <div className="mb-4">
+            <div className="mb-6">
               <span className="text-[#38bdf8] text-sm md:text-base font-bold tracking-wider uppercase">
                 . {t.sectionTitle}
               </span>
