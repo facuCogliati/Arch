@@ -34,9 +34,12 @@ const FeatureMeasurementsSection = ({ t }) => {
           {/* Texto (Izquierda) 
               Efecto: Entra desde abajo flotando suavemente */}
           <div
-            className={`order-1 transition-all duration-700 ${
+            className={`order-1 transition-all ease-out ${
               inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
             }`}
+            style={{
+              transitionDuration: "1.5s",
+            }}
           >
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-white">
               {t.title.split("\n").map((line, index, array) => (
@@ -59,9 +62,13 @@ const FeatureMeasurementsSection = ({ t }) => {
           {/* Imagen Rotativa (Derecha) 
               Efecto: Desliza desde la derecha con delay */}
           <div
-            className={`order-2 flex justify-center lg:justify-end transition-all duration-700 delay-300 ${
+            className={`order-2 flex justify-center lg:justify-end transition-all ease-out ${
               inView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-16"
             }`}
+            style={{
+              transitionDuration: "1.5s",
+              transitionDelay: "0.4s",
+            }}
           >
             <div className="relative w-11/12 lg:w-full">
               <img

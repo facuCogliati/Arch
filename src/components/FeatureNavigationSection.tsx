@@ -22,9 +22,12 @@ const FeatureNavigationSection = ({ t }) => {
               Efecto: Entra desde la izquierda
               -------------------- */}
           <div
-            className={`order-2 lg:order-1 flex justify-center lg:justify-end transition-all duration-[800ms] ${
+            className={`order-2 lg:order-1 flex justify-center lg:justify-end transition-all ease-out ${
               inView ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-12"
             }`}
+            style={{
+              transitionDuration: "1.5s",
+            }}
           >
             <div className="relative">
               <img
@@ -43,12 +46,16 @@ const FeatureNavigationSection = ({ t }) => {
 
           {/* --------------------
               Columna 2 (Desktop): Laptop
-              Efecto: Zoom sutil desde el centro (y un poco de delay)
+              Efecto: Zoom sutil desde el centro (con delay)
               -------------------- */}
           <div
-            className={`order-3 lg:order-2 flex justify-center transition-all duration-[800ms] delay-200 ${
+            className={`order-3 lg:order-2 flex justify-center transition-all ease-out ${
               inView ? "opacity-100 scale-100" : "opacity-0 scale-90"
             }`}
+            style={{
+              transitionDuration: "1.5s",
+              transitionDelay: "0.3s",
+            }}
           >
             <div className="relative">
               <img
@@ -56,7 +63,7 @@ const FeatureNavigationSection = ({ t }) => {
                 alt="Aplicación web ArchVisualizer en Laptop"
                 className="relative w-full max-w-[320px] md:max-w-[400px] shadow-2xl animate-float"
                 style={{
-                  animationDelay: "0.5s",
+                  animationDelay: "0.5s", // Esto es para el flotado continuo, no toca nuestra animación de entrada
                 }}
               />
             </div>
@@ -64,12 +71,16 @@ const FeatureNavigationSection = ({ t }) => {
 
           {/* --------------------
               Columna 3 (Desktop): Texto
-              Efecto: Entra desde la derecha (con un poco más de delay)
+              Efecto: Entra desde la derecha (con más delay)
               -------------------- */}
           <div
-            className={`order-1 lg:order-3 text-center lg:text-left transition-all duration-[800ms] delay-400 ${
+            className={`order-1 lg:order-3 text-center lg:text-left transition-all ease-out ${
               inView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-12"
             }`}
+            style={{
+              transitionDuration: "1.5s",
+              transitionDelay: "0.6s",
+            }}
           >
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-white">
               {t.title.split("\n").map((line, index, array) => (

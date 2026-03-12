@@ -20,9 +20,13 @@ const ManagementSection = ({ t }) => {
           {/* Texto 
               Efecto: Cae suavemente desde arriba */}
           <div
-            className={`transition-all duration-[800ms] ${
+            className={`transition-all ease-out ${
               inView ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-12"
             }`}
+            style={{
+              transitionDuration: "1.5s",
+              transitionDelay: "0.2s",
+            }}
           >
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-white">
               {t.title.split("\n").map((line, index, array) => (
@@ -58,9 +62,13 @@ const ManagementSection = ({ t }) => {
           {/* Imagen 
               Efecto: Sube desde abajo con un poco de delay para completar la cascada */}
           <div
-            className={`flex-1 w-full transition-all duration-[800ms] delay-300 ${
+            className={`flex-1 w-full transition-all ease-out ${
               inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"
             }`}
+            style={{
+              transitionDuration: "1.5s",
+              transitionDelay: "0.4s",
+            }}
           >
             <div className="relative">
               <img
