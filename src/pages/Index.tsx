@@ -68,7 +68,7 @@ export const es = {
     btnHow: "CÓMO FUNCIONA",
   },
   exploration: {
-    sectionTitle: "EXPERIENCIA DE EXPLORACIÓN",
+    sectionTitle: "Experiencia De Exploración",
     // Agregamos \n al título y usamos exactamente tu texto original de la web
     card1Title: "Vista 3D Interactiva\nPara Cada Unidad",
     card1Desc:
@@ -83,7 +83,7 @@ export const es = {
     desc: "Dimensiones precisas\ny alternativas de configuración disponibles\ncuando el proyecto requiere.",
   },
   managementMicrosite: {
-    sectionTitle: "GESTIÓN COMERCIAL",
+    sectionTitle: "Gestión Comercial",
     title: "Micrositio Dedicado\nPara Cada Proyecto",
     desc: "Presente el desarrollo en un entorno exclusivo,\naccesible mediante link o código QR\ndesde el cartel de obra o desde su sitio web comercial.",
   },

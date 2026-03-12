@@ -22,7 +22,7 @@ const MicrositeSection = ({ t }) => {
             inView ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4"
           }`}
         >
-          <span className="text-[#38bdf8] text-lg font-bold tracking-wider uppercase ">
+          <span className="text-[#38bdf8] text-sm md:text-xl font-bold tracking-wider  ">
             . {t.sectionTitle}
           </span>
         </div>

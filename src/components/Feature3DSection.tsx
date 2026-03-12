@@ -27,7 +27,7 @@ const Feature3DSection = ({ t }) => {
             }`}
           >
             <div className="mb-6">
-              <span className="text-[#38bdf8] text-sm md:text-base font-bold tracking-wider uppercase">
+              <span className="text-[#38bdf8] text-sm md:text-xl font-bold tracking-wider ">
                 . {t.sectionTitle}
               </span>
             </div>
