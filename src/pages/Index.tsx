@@ -55,6 +55,17 @@ export const en = {
     desc: "Do you have questions before getting started?\nOur team is here to assist you at every stage of the process,\nwhether related to functionality or technical details.",
     email: "info@archvisualizer.com",
     phone: "+54 911 5662 7904",
+    // --- NUEVOS TEXTOS DEL FORMULARIO ---
+    formName: "Name (Optional)",
+    formEmail: "Email",
+    formPhone: "Phone Number (Optional)",
+    formMessage: "How can we help you?",
+    formSubmit: "SEND MESSAGE",
+    formSubmitting: "SENDING...",
+    formSuccess: "Message sent successfully! We will contact you soon.",
+    errorRequired: "This field is required.",
+    errorEmail: "Please enter a valid email.",
+    errorSubmit: "Something went wrong. Please try again.",
   },
   footer: "©2026 ARCHVISUALIZER",
 };
@@ -100,6 +111,18 @@ export const es = {
     desc: "¿Tienes preguntas antes de empezar?\nNuestro equipo está aquí para ayudarte en cada paso del proceso,\nya sea sobre funcionalidad o aclaraciones técnicas.",
     email: "info@archvisualizer.com",
     phone: "+54 911 5662 7904",
+    // --- NUEVOS TEXTOS DEL FORMULARIO ---
+    formName: "Nombre (Opcional)",
+    formEmail: "Correo electrónico",
+    formPhone: "Teléfono (Opcional)",
+    formMessage: "¿En qué podemos ayudarte?",
+    formSubmit: "ENVIAR MENSAJE",
+    formSubmitting: "ENVIANDO...",
+    formSuccess:
+      "¡Mensaje enviado con éxito! Nos pondremos en contacto pronto.",
+    errorRequired: "Este campo es obligatorio.",
+    errorEmail: "Por favor, ingresa un correo válido.",
+    errorSubmit: "Hubo un error al enviar. Por favor, intenta de nuevo.",
   },
   footer: "©2026 ARCHVISUALIZER",
 };
