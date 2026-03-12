@@ -1,5 +1,5 @@
 import phoneMockup from "@/assets/CELU HD.png";
-import laptopMockup from "@/assets/LAPTOP HD.png";
+import laptopMockup from "@/assets/laptop con pantalla.png";
 import { useInView } from "react-intersection-observer";
 
 const FeatureNavigationSection = ({ t }) => {
@@ -33,7 +33,8 @@ const FeatureNavigationSection = ({ t }) => {
               <img
                 src={phoneMockup}
                 alt="Aplicación móvil ArchVisualizer"
-                className="relative max-w-[220px] md:max-w-[260px] rounded-[2.5rem] border-[8px] border-black/80 shadow-2xl animate-float"
+                // ACÁ ESTÁ EL CAMBIO: Bajamos de max-w-[220px] a max-w-[160px] para móviles
+                className="relative max-w-[160px] md:max-w-[260px] rounded-[2.5rem] border-[4px] border-black/80 shadow-2xl animate-float"
                 style={{
                   WebkitMaskImage:
                     "linear-gradient(to bottom, black 87%, transparent 90%, transparent 100%)",
