@@ -1,42 +1,54 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import heroVideo from "@/assets/ARCHVISUALIZER - ES. WEB.mp4";
+import heroVideoES from "@/assets/ARCHVISUALIZER - ES. WEB.mp4";
+import heroVideoEN from "@/assets/ARCHVISUALIZER - EN. WEB.mp4";
 import { Link } from "react-router-dom";
 
-const HeroSection = () => {
-  // Estado para controlar si el popup del video está abierto
+// 1. Recibimos la prop "t"
+const HeroSection = ({ t, lang }) => {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
+
+  // 2. Cortamos el título donde pusiste el "\n" en tu objeto
+  const [titleLine1, titleLine2] = t.title.split("\n");
+
+  // 3. Cortamos el subtítulo donde hay un punto para separarlo en dos líneas
+  // (ya que en tu objeto lo separaste con un punto ". ")
+  const [subLine1, subLine2] = t.subtitle.split(". ");
+
+  const currentVideo = lang === "es" ? heroVideoES : heroVideoEN;
 
   return (
     <section className="relative flex flex-col items-center justify-center pt-44 md:pt-60 pb-36 md:pb-36 overflow-hidden bg-transparent">
-      {/* ... (Las luces/decoraciones siguen igual) ... */}
+      {/* ... (Las luces y decoraciones siguen igual) ... */}
 
       <div className="container relative z-10 text-center">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 animate-fade-in-up">
-          Visualización 3D
+          {titleLine1}
           <br />
-          <span className="text-gradient">
-            Para Comercialización Inmobiliaria
-          </span>
+          <span className="text-gradient">{titleLine2}</span>
         </h1>
 
         <p
           className="text-lg md:text-xl text-white font-semibold max-w-2xl mx-auto mb-10 animate-fade-in-up"
           style={{ animationDelay: "0.1s" }}
         >
-          La forma más clara de vender unidades de pozo o en construcción
-          <br className="hidden md:block" />
-          Muestre sus unidades como nunca antes
+          {subLine1}
+          {/* Si hay una segunda línea (subLine2), la renderizamos con su <br /> */}
+          {subLine2 && (
+            <>
+              <br className="hidden md:block" />
+              {subLine2}
+            </>
+          )}
         </p>
 
         <div
           className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up"
           style={{ animationDelay: "0.2s" }}
         >
-          {/* Agregamos el onClick para cambiar el estado y abrir el video */}
           <Link to="https://www.archvisualizer.com/serena/">
             <Button variant="hero" size="lg">
-              VER DEMO
+              {t.btnDemo}
             </Button>
           </Link>
           <Button
@@ -44,50 +56,33 @@ const HeroSection = () => {
             size="lg"
             onClick={() => setIsVideoOpen(true)}
           >
-            CÓMO FUNCIONA
+            {t.btnHow}
           </Button>
         </div>
       </div>
 
       {/* =========================================================
           POPUP DEL VIDEO
-          Se renderiza solo cuando isVideoOpen es true
          ========================================================= */}
       {isVideoOpen && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center px-4">
-          {/* Fondo oscuro desenfocado. Al hacer clic acá, se cierra el modal */}
           <div
             className="absolute inset-0 bg-black/80 backdrop-blur-sm cursor-pointer"
             onClick={() => setIsVideoOpen(false)}
           ></div>
 
-          {/* Contenedor principal del video */}
           <div className="relative z-10 w-full max-w-5xl rounded-2xl overflow-hidden shadow-2xl bg-black animate-fade-in-up">
-            {/* Botón de cerrar (Crucecita) arriba a la derecha */}
             <button
               onClick={() => setIsVideoOpen(false)}
               className="absolute top-4 right-4 z-20 text-white bg-black/40 hover:bg-black/80 rounded-full w-10 h-10 flex items-center justify-center transition-colors"
               aria-label="Cerrar video"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <line x1="18" y1="6" x2="6" y2="18"></line>
-                <line x1="6" y1="6" x2="18" y2="18"></line>
-              </svg>
+              {/* ... (SVG del botón cerrar) ... */}
             </button>
 
-            {/* Etiqueta de video */}
             <video
-              src={heroVideo}
+              // 3. Acá usamos la variable currentVideo en el src
+              src={currentVideo}
               controls
               autoPlay
               className="w-full h-auto max-h-[85vh] outline-none"

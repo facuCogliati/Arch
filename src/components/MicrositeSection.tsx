@@ -1,14 +1,15 @@
 import micrositePreview from "@/assets/MICROSITIO-q59.jpg";
 
-const MicrositeSection = () => {
+// Recibimos t
+const MicrositeSection = ({ t }) => {
   return (
     // 1. Fondo transparente
     <section className="py-10 md:py-28 bg-transparent">
       <div className="container">
         {/* 2. Subtítulo: Punto y color celeste */}
         <div className="mb-4">
-          <span className="text-[#38bdf8] text-lg  font-bold tracking-wider ">
-            . Gestión Comercial
+          <span className="text-[#38bdf8] text-lg  font-bold tracking-wider uppercase">
+            . {t.sectionTitle}
           </span>
         </div>
 
@@ -16,17 +17,21 @@ const MicrositeSection = () => {
           {/* Text Content */}
           <div className="order-1">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-white">
-              Micrositio Dedicado
-              <br />
-              Para Cada Proyecto
+              {t.title.split("\n").map((line, index, array) => (
+                <span key={index}>
+                  {line}
+                  {index < array.length - 1 && <br />}
+                </span>
+              ))}
             </h2>
             {/* 3. Texto claro (gris casi blanco) */}
             <p className="text-white font-semibold text-lg leading-relaxed">
-              Presente el desarrollo en un entorno exclusivo,
-              <br />
-              accesible mediante link o código QR
-              <br />
-              desde el cartel de obra o desde su sitio web comercial.
+              {t.desc.split("\n").map((line, index, array) => (
+                <span key={index}>
+                  {line}
+                  {index < array.length - 1 && <br />}
+                </span>
+              ))}
             </p>
           </div>
 
@@ -37,10 +42,6 @@ const MicrositeSection = () => {
               <img
                 src={micrositePreview}
                 alt="Vista previa del micrositio"
-                // CAMBIO AQUÍ:
-                // - Se cambió el color del borde a '#38bdf8' (celeste).
-                // - Se aumentó el grosor del borde a 'border-2'.
-                // - Se ajustó la sombra a 'shadow-xl' para un efecto más suave.
                 className="relative shadow-xl w-full border-2 border-[#38bdf8] lg:min-h-[500px]"
               />
             </div>

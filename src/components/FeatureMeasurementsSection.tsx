@@ -1,30 +1,20 @@
 import { useState, useEffect } from "react";
 import dashboardVariants from "@/assets/VERSION 1.jpg";
 import dashboardVariants2 from "@/assets/VERSION 2.jpg";
-// Si tienes la segunda imagen real, impórtala aquí:
-// import dashboardVariants2 from "@/assets/dashboard-variants-2.jpg";
 
-const FeatureMeasurementsSection = () => {
-  // 1. Array de imágenes a rotar
-  // (Si tienes la segunda imagen real, reemplaza la segunda 'dashboardVariants' por 'dashboardVariants2')
-  const images = [
-    dashboardVariants,
-    dashboardVariants2, // Pon aquí tu segunda imagen
-  ];
+// 1. Recibimos "t"
+const FeatureMeasurementsSection = ({ t }) => {
+  const images = [dashboardVariants, dashboardVariants2];
 
-  // 2. Estado para saber qué índice mostrar (0 o 1)
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  // 3. Efecto para rotar cada 4 segundos
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) =>
-        // Si estamos en la última, volvemos a 0, si no, sumamos 1
         prevIndex === images.length - 1 ? 0 : prevIndex + 1,
       );
-    }, 2000); // 4000ms = 4 segundos
+    }, 2000);
 
-    // Limpieza del intervalo cuando el componente se desmonta
     return () => clearInterval(interval);
   }, [images.length]);
 
@@ -35,15 +25,22 @@ const FeatureMeasurementsSection = () => {
           {/* Texto (Izquierda) */}
           <div className="order-1">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-white">
-              Medidas por Ambiente
-              <br />y Variantes de Armado
+              {/* Leemos los \n del título y ponemos <br /> */}
+              {t.title.split("\n").map((line, index, array) => (
+                <span key={index}>
+                  {line}
+                  {index < array.length - 1 && <br />}
+                </span>
+              ))}
             </h2>
             <p className="text-gray-200 text-lg leading-relaxed">
-              Dimensiones precisas
-              <br />
-              y alternativas de configuración disponibles
-              <br />
-              cuando el proyecto lo requiere.
+              {/* Leemos los \n de la descripción y ponemos <br /> */}
+              {t.desc.split("\n").map((line, index, array) => (
+                <span key={index}>
+                  {line}
+                  {index < array.length - 1 && <br />}
+                </span>
+              ))}
             </p>
           </div>
 
@@ -54,7 +51,6 @@ const FeatureMeasurementsSection = () => {
                 src={images[currentImageIndex]}
                 alt="Variantes de armado"
                 className="relative lg:min-h-[500px] shadow-2xl w-full border border-white/5 object-cover"
-                // 'object-cover' asegura que si las imagenes tienen distinto tamaño, llenen el espacio igual
               />
 
               {/* Opcional: Indicadores (puntos) para saber que hay más fotos */}

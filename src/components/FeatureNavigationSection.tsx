@@ -1,7 +1,8 @@
 import phoneMockup from "@/assets/CELU HD.png";
 import laptopMockup from "@/assets/LAPTOP HD.png";
 
-const FeatureNavigationSection = () => {
+// Recibimos la prop "t" (que va a ser t.explorationNav)
+const FeatureNavigationSection = ({ t }) => {
   return (
     // 1. FONDO TRANSPARENTE
     <section className="py-10 md:py-28 bg-transparent">
@@ -51,16 +52,22 @@ const FeatureNavigationSection = () => {
               -------------------- */}
           <div className="order-1 lg:order-3 text-center lg:text-left">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-white">
-              Navegación Simple
-              <br />
-              desde Web o Celular
+              {/* Iteramos sobre el título para inyectar los <br /> */}
+              {t.title.split("\n").map((line, index, array) => (
+                <span key={index}>
+                  {line}
+                  {index < array.length - 1 && <br />}
+                </span>
+              ))}
             </h2>
             <p className="text-white font-semibold text-lg leading-relaxed">
-              Acceso inmediato mediante link,
-              <br />
-              desde cualquier dispositivo
-              <br />
-              sin descargar apps ni realizar instalaciones.
+              {/* Iteramos sobre la descripción para inyectar los <br /> */}
+              {t.desc.split("\n").map((line, index, array) => (
+                <span key={index}>
+                  {line}
+                  {index < array.length - 1 && <br />}
+                </span>
+              ))}
             </p>
           </div>
         </div>
