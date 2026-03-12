@@ -1,28 +1,38 @@
 import apartmentView from "@/assets/Feature-section.jpg";
+// 1. Importamos el hook
+import { useInView } from "react-intersection-observer";
 
 const Feature3DSection = ({ t }) => {
+  // 2. Configuramos el observador
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.2, // Se dispara cuando el 20% del elemento es visible
+  });
+
   return (
-    // Mantenemos bg-transparent para que se vea el plano de fondo del Index
     <section
       id="features"
-      className="pt-8 md:pt-16 pb-100 md:pb-32 bg-transparent"
+      // 3. Le pasamos la "ref" a la sección padre para que sepa cuándo está en pantalla
+      ref={ref}
+      className="pt-8 md:pt-16 pb-100 md:pb-32 bg-transparent overflow-hidden"
     >
       <div className="container">
-        {/* Ajusté el gap para separar más la imagen del texto, como en la foto */}
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-start">
-          {/* Columna de Texto */}
-          <div className="order-1">
-            {/* 1. SUBTÍTULO CORREGIDO */}
+          {/* Columna de Texto: Le agregamos la lógica de inView */}
+          <div
+            className={`order-1 transition-all duration-700 ${
+              inView
+                ? "animate-fade-in-up opacity-100"
+                : "opacity-0 translate-y-10"
+            }`}
+          >
             <div className="mb-4">
-              {/* Cambié "_" por "." y aseguré un color celeste brillante (text-sky-400 o primary) */}
               <span className="text-[#38bdf8] text-sm md:text-base font-bold tracking-wider uppercase">
                 . {t.sectionTitle}
               </span>
             </div>
 
-            {/* 2. TÍTULO */}
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-              {/* Convertimos los \n del diccionario en etiquetas <br /> reales */}
               {t.card1Title.split("\n").map((line, index, array) => (
                 <span key={index}>
                   {line}
@@ -31,10 +41,7 @@ const Feature3DSection = ({ t }) => {
               ))}
             </h2>
 
-            {/* 3. PÁRRAFO */}
-            {/* Usamos text-gray-200 para que sea bien legible sobre el azul oscuro */}
             <p className="text-gray-200 text-lg md:text-xl leading-relaxed max-w-lg">
-              {/* Convertimos los \n del diccionario en etiquetas <br /> reales */}
               {t.card1Desc.split("\n").map((line, index, array) => (
                 <span key={index}>
                   {line}
@@ -44,9 +51,14 @@ const Feature3DSection = ({ t }) => {
             </p>
           </div>
 
-          {/* Columna de Imagen */}
-          <div className="order-2 flex-1 lg:mt-[50px]">
-            {/* 4. IMAGEN LIMPIA */}
+          {/* Columna de Imagen: Podemos hacer que esta tarde un poquito más en animarse (delay) */}
+          <div
+            className={`order-2 flex-1 lg:mt-[50px] transition-all duration-700 delay-200 ${
+              inView
+                ? "animate-fade-in-up opacity-100"
+                : "opacity-0 translate-y-10"
+            }`}
+          >
             <div className="relative">
               <img
                 src={apartmentView}
