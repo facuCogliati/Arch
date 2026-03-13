@@ -105,7 +105,7 @@ const ContactSection = ({ t }) => {
           {/* COLUMNA DERECHA: Formulario Nativo */}
           <div className="bg-[#111827] p-8 md:p-10 rounded-2xl border border-white/5 shadow-2xl relative">
             <form
-              action="https://formsubmit.co/fcogliati@casablancapolo.com"
+              action="https://formsubmit.co/info@archvisualizer.com"
               method="POST"
               onSubmit={handleSubmit}
               className="flex flex-col gap-5"
