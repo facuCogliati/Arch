@@ -68,11 +68,6 @@ const HeroSection = ({ t, lang }) => {
             transitionDelay: "1s",
           }}
         >
-          <Link to="https://www.archvisualizer.com/serena/">
-            <Button variant="hero" size="lg">
-              {t.btnDemo}
-            </Button>
-          </Link>
           <Button
             variant="heroOutline"
             size="lg"
@@ -80,6 +75,11 @@ const HeroSection = ({ t, lang }) => {
           >
             {t.btnHow}
           </Button>
+          <Link to="https://www.archvisualizer.com/serena/">
+            <Button variant="hero" size="lg">
+              {t.btnDemo}
+            </Button>
+          </Link>
         </div>
       </div>
 

@@ -116,6 +116,11 @@ const ContactSection = ({ t }) => {
                 name="_subject"
                 value="Nuevo contacto web - ArchVisualizer"
               />
+              <input
+                type="hidden"
+                name="_url"
+                value="https://archvisualizer.com/index.html"
+              />
               <input type="hidden" name="_template" value="box" />
               <input type="hidden" name="_next" value={window.location.href} />
 
