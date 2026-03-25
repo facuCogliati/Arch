@@ -89,11 +89,11 @@ const HeroSection = ({ t, lang }) => {
           >
             {t.btnHow}
           </Button>
-          <Link to="https://www.archvisualizer.com/serena/">
+          {/* <Link to="https://www.archvisualizer.com/serena/">
             <Button variant="hero" size="lg">
               {t.btnDemo}
             </Button>
-          </Link>
+          </Link> */}
         </div>
       </div>
 
