@@ -68,6 +68,20 @@ const HeroSection = ({ t, lang }) => {
             transitionDelay: "1s",
           }}
         >
+          {/* <Link to="https://www.archvisualizer.com/serena/"> */}
+          <Link
+            to={
+              lang === "es"
+                ? "https://www.archvisualizer.com/es/serena"
+                : "https://www.archvisualizer.com/en/serena"
+            }
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button variant="hero" size="lg">
+              {t.btnDemo}
+            </Button>
+          </Link>
           <Button
             variant="heroOutline"
             size="lg"
