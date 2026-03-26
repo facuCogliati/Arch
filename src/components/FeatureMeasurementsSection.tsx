@@ -74,7 +74,7 @@ const FeatureMeasurementsSection = ({ t }) => {
                   key={idx}
                   src={imgSrc}
                   alt={`Variante de armado ${idx + 1}`}
-                  className={`absolute top-0 left-0 w-full h-full object-contain   border-white/5  ${
+                  className={`absolute top-0 left-0 w-full h-full   border-white/5  ${
                     idx === currentImageIndex ? "block" : "hidden"
                   }`}
                 />

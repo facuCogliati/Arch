@@ -69,6 +69,14 @@ const HeroSection = ({ t, lang }) => {
           }}
         >
           {/* <Link to="https://www.archvisualizer.com/serena/"> */}
+
+          <Button
+            variant="heroOutline"
+            size="lg"
+            onClick={() => setIsVideoOpen(true)}
+          >
+            {t.btnHow}
+          </Button>
           <Link
             to={
               lang === "es"
@@ -82,13 +90,6 @@ const HeroSection = ({ t, lang }) => {
               {t.btnDemo}
             </Button>
           </Link>
-          <Button
-            variant="heroOutline"
-            size="lg"
-            onClick={() => setIsVideoOpen(true)}
-          >
-            {t.btnHow}
-          </Button>
           {/* <Link to="https://www.archvisualizer.com/serena/">
             <Button variant="hero" size="lg">
               {t.btnDemo}
